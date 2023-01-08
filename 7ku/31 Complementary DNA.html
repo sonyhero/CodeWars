@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function DNAStrand(dna) {
+        let newDna = "";
+        for (let i = 0; i < dna.length; i++) {
+          if (dna[i] == "A") {
+            newDna += "T";
+          } else if (dna[i] == "T") {
+            newDna += "A";
+          } else if (dna[i] == "C") {
+            newDna += "G";
+          } else if (dna[i] == "G") {
+            newDna += "C";
+          }
+        }
+        return newDna;
+      }
+    </script>
+  </body>
+</html>
