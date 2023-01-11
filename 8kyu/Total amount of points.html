@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function points(games) {
+        let newGames = [];
+        let score = 0;
+        for (let i = 0; i < games.length; i++) {
+          newGames.push(games[i].split(":"));
+        }
+        for (let j = 0; j < newGames.length; j++) {
+          if (newGames[j][0] > newGames[j][1]) {
+            score += 3;
+          }
+          if (newGames[j][0] < newGames[j][1]) {
+            score += 0;
+          }
+          if (newGames[j][0] == newGames[j][1]) {
+            score += 1;
+          }
+        }
+        return score;
+      }
+    </script>
+  </body>
+</html>
