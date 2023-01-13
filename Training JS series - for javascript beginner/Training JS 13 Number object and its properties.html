@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function whatNumberIsIt(n) {
+        if (n === Number.MAX_VALUE) return "Input number is Number.MAX_VALUE";
+        if (n === Number.MIN_VALUE) return "Input number is Number.MIN_VALUE";
+        if (isNaN(n)) return "Input number is Number.NaN";
+        if (n <= Number.NEGATIVE_INFINITY)
+          return "Input number is Number.NEGATIVE_INFINITY";
+        if (n >= Number.POSITIVE_INFINITY)
+          return "Input number is Number.POSITIVE_INFINITY";
+        else return `Input number is ${n}`;
+      }
+    </script>
+  </body>
+</html>
