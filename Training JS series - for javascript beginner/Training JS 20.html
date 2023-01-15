@@ -14,7 +14,22 @@
         let c = [];
         for (let i = 0; i < b.length; i++) {
           for (let j = 0; j < b[i].length; j++) {
-            b[i][j] = String.fromCharCode(b[i][j].charCodeAt() - 3);
+            switch (b[i][j]) {
+                case 'A': b[i][j] = 'X'
+                    break;
+                case 'B': b[i][j] = 'Y'
+                    break;
+                case 'C': b[i][j] = 'Z'
+                    break;
+                case 'a': b[i][j] = 'x'
+                    break;
+                case 'b': b[i][j] = 'y'
+                    break;
+                case 'c': b[i][j] = 'z'
+                    break;
+                default: b[i][j] = String.fromCharCode(b[i][j].charCodeAt() - 3);
+                    break;
+            }
           } 
         }
         return b.map(x=>x.join('')).join(' ');
