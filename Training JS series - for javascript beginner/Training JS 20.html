@@ -27,6 +27,8 @@
                     break;
                 case 'c': b[i][j] = 'z'
                     break;
+                case '!': b[i][j] = '!'
+                    break;
                 default: b[i][j] = String.fromCharCode(b[i][j].charCodeAt() - 3);
                     break;
             }
@@ -34,8 +36,6 @@
         }
         return b.map(x=>x.join('')).join(' ');
       }
-
-      topSecret("Pb qdph lv Mrkq");
     </script>
   </body>
 </html>
