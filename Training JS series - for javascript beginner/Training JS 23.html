@@ -8,18 +8,19 @@
   </head>
   <body>
     <script>
-              function infiniteLoop(arr,d,n){
+        function infiniteLoop(arr,d,n){
         if ( d == "right") {
           for ( let i = 0; i < n; i++) {
-            arr[i].unshift(arr[i+2].pop());
-            arr[i+1].unshift(arr[i].pop());
-            arr[i+2].unshift(arr[i+1].pop());
+            arr[0].unshift(arr[2].pop());
+            arr[1].unshift(arr[0].pop());
+            arr[2].unshift(arr[1].pop());
           }
+        }
         if ( d == "left") {
           for ( let i = 0; i < n; i++) {
-            arr[i].push(arr[i+2].shift());
-            arr[i+1].push(arr[i].shift());
-            arr[i+2].push(arr[i+1].shift());
+            arr[0].push(arr[1].shift());
+            arr[1].push(arr[2].shift());
+            arr[2].push(arr[0].shift());
           }
         }
         return arr;
