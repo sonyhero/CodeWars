@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function infiniteLoop(arr, d, n) {
+        if (d == "right") {
+          for (let i = 0; i < n; i++) {
+            arr[i].pop();
+            arr[i].unshift(arr[i + 2].pop());
+            arr[i + 1].pop();
+            arr[i + 1].unshift(arr[i].pop());
+            arr[i + 2].unshift(arr[i + 1].pop());
+          }
+        }
+        return arr;
+      }
+    </script>
+  </body>
+</html>
