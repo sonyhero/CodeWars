@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function alienLanguage(s) {
+        let a = s.toUpperCase().split(" ");
+        let b = [];
+        for (let i = 0; i < a.length; i++) {
+          b.push(
+            a[i].slice(0, a[i].length - 1) + a[i][a[i].length - 1].toLowerCase()
+          );
+        }
+        return b.join(" ");
+      }
+    </script>
+  </body>
+</html>
