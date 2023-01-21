@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function checkExam(array1, array2) {
+        let score = 0;
+        for (let i = 0; i < array1.length; i++) {
+          if (array2[i] == array1[i]) {
+            score += 4;
+          } else if (array2[i] == "") {
+            score += 0;
+          } else {
+            score += -1;
+          }
+        }
+        return score < 0 ? 0 : score;
+      }
+    </script>
+  </body>
+</html>
