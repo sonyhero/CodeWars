@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function nbDig(n, d) {
+        let arr = [];
+        let sum = 0;
+        for (let i = 0; i <= n; i++) {
+          arr.push((i ** 2).toString());
+        }
+        let newArr = arr.map((x) => x.split("")).flat(Infinity);
+        for (let i = 0; i <= newArr.length; i++) {
+          if (Number(newArr[i]) == d) sum++;
+        }
+        return sum;
+      }
+
+      //or
+
+      function nbDig(n, d) {
+        var o = "";
+        for (var i = 0; i <= n; i++) {
+          o += Math.pow(i, 2);
+        }
+        return o.split(d).length - 1;
+      }
+    </script>
+  </body>
+</html>
