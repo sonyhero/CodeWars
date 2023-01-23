@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sortIt(arr) {
+        return arr.slice().sort((a, b) => {
+          let countA = arr.filter((v) => v === a).length;
+          let countB = arr.filter((v) => v === b).length;
+          if (countA === countB) {
+            return b - a;
+          } else if (countA > countB) {
+            return 1;
+          } else {
+            return -1;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
