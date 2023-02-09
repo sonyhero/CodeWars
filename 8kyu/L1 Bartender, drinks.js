@@ -13,7 +13,30 @@ Note: anything else is the default case: if the input to the function is not any
 
 Make sure you cover the cases where certain words do not show up with correct capitalization. For example, the input "pOLitiCIaN" should still return "Your tax dollars".
 */
+let param = "RapPEr";
+console.log(param[0].toUpperCase()+param.toLowerCase().slice(1,param.length))
 
 function getDrinkByProfession(param){
-    let pairs = 
+    switch (param.toUpperCase()) {
+        case "Jabroni".toUpperCase():
+            return "Patron Tequila";
+            break;
+        case "School Counselor".toUpperCase():
+            return "Anything with Alcohol";
+            break;
+        case "Programmer".toUpperCase():
+            return "Hipster Craft Beer";
+            break;
+        case "Bike Gang Member".toUpperCase():
+            return "Moonshine";
+            break;
+        case "Politician".toUpperCase():
+            return "Your tax dollars";
+            break;
+        case "Rapper".toUpperCase():
+            return "Cristal";
+            break;
+        default: return "Beer"
+            break;
+    }
    }
