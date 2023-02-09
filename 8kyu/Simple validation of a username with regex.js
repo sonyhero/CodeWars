@@ -7,5 +7,5 @@ underscore
 Length should be between 4 and 16 characters (both included).*/
 
 function validateUsr(username) {
-    return res =  //.test(username);
+    return /^[a-z0-9_]{4,16}$/.test(username) 
   }
