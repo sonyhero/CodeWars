@@ -14,6 +14,13 @@ calculator(1,"k","*"); //=> result will be "unknown value"
 Good luck!
 */
 
-function calculator(a,b,sign){
 
-}
+function calculator(a,b,sign){
+    if (typeof a === 'number' && typeof b === 'number'){
+           if ( sign == "+") { return a+b;}
+           if ( sign == "-") { return a-b;}
+           if ( sign == "*") { return a*b;}
+           if ( sign == "/") { return a/b;}
+           else return "unknown value";
+    } else return "unknown value"
+   }
