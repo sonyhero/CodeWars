@@ -10,7 +10,7 @@ Our deck (is preloaded):
 */
 
 function defineSuit(card) {
-    switch (card[1]) {
+    switch (card[card.length-1]) {
         case '♣': return 'clubs';
             break;
         case '♦': return 'diamonds';
