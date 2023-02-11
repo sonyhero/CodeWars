@@ -8,6 +8,12 @@ For example:
 ([6, -25, 3, 7, 5, 5, 7, -3, 23], 1) => [6]
 */
 
-function evenNumbers(array, number) {
-    // good luck
+function evenNumbers(array, n) {
+    let newArr = [];
+    let arr = array.filter(x=>x%2==0).reverse()
+    for (let i = 0; i <= arr.length && i < n; i++) {
+        newArr.push(arr[i])
+    }
+    return newArr.reverse()
 }
+console.log(evenNumbers([6, -25, 3, 7, 5, 5, 7, -3, 23], 1))
