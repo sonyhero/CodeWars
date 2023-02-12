@@ -10,8 +10,15 @@ Apple => [1,5]
 YoMama -> [1,2,4,6]
 */
 
-function vowelIndices(word){
-    //your code here
-  }
+function vowelIndices(word) {
+  let reg = /[aeiouy]/i;
+  let arr = [];
+  word.split("").map(function (x, i) {
+    if (reg.test(x)) {
+      arr.push(i + 1);
+    }
+  });
+  return arr;
+}
 
-console.log(vowelIndices(YoMama))
+console.log(vowelIndices("YoMama"));
