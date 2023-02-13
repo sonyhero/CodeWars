@@ -17,14 +17,30 @@ high('man i need a taxi up to ubud') --> 'taxi'
 function high(x) {
   let arr = x.split(" ");
   console.log(arr);
+  
   let arr1 = arr.map(x=>x.split(''))
   console.log(arr1)
-  let arr2 = arr1.map(x=>x.map(x=>x.charCodeAt(0)).reduce((a,b)=>a+b))
+  
+  let arr11 = arr1.map(x=>x.map(x=>x.charCodeAt(0)-96))
+  console.log(arr11)
+  
+  let arr2 = arr1.map(x=>x.map(x=>x.charCodeAt(0)-96).reduce((a,b)=>a+b))
   console.log(arr2)
+  
   console.log(
     arr.map(x=>x.split('').map(x=>x.charCodeAt(0)).reduce((a,b)=>a+b))
     )
+    
+    let max =  Math.max(...arr2);
 
+for (let i = 0; i < arr2.length; i++) {
+    if (arr2[i] == max) {
+        return arr[i]
+    }
+    
+}
 }
 
-console.log(high("man i need a taxi up to ubud"));
+
+
+console.log(high('what time are we climbing up the volcano'));
