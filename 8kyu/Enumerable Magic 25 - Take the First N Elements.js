@@ -3,8 +3,12 @@ Create a function that accepts a list/array and a number n, and returns a list/a
 */
 
 function take(arr, n) {
-    // Your code here
+  let el = [];
+  if (n > arr.length) n = arr.length;
+  for (let i = 0; i < n; i++) {
+    el.push(arr[i]);
   }
-
+  return arr.length == 0 ? [] : el;
+}
 
 console.log(take([0, 1, 2, 3, 5, 8, 13], 3));
