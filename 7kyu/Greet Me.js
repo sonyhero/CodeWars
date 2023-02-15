@@ -9,7 +9,7 @@ Example:
 
 function greet(name) {
     let n = name[0].toUpperCase() + name.slice(1).toLowerCase()
-    return `Hello ${n}!`
+    return `Hello ${n}!`;
 }
 
 console.log(greet("jack"));
