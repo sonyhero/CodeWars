@@ -6,7 +6,8 @@ to_binary(5)  should return 101
 to_binary(11)  should return 1011 
 */
 
-function toBinary(n){
-  }
+function toBinary(n) {
+    return +n.toString(2)
+}
 
 console.log(toBinary(2))
