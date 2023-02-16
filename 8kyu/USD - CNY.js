@@ -10,7 +10,8 @@ All numbers should be represented as a string with 2 decimal places.
 */
 
 function usdcny(usd) {
-    return 
-  }
+  let cny = (6.75 * usd).toFixed(2);
+  return `${cny} Chinese Yuan`;
+}
 
-  console.log(usdcny(35));
+console.log(usdcny(6634));
