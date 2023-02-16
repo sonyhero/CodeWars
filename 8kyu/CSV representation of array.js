@@ -5,6 +5,11 @@ CSV representation of array
 function toCsvText(array) {
   return array.map((x) => x.join(",")).join("\n");
 }
+//or
+function toCsvText(array) {
+    return array.join("\n");
+  }
+
 
 console.log(
   toCsvText([
