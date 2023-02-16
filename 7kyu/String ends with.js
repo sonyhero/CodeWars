@@ -7,7 +7,10 @@ solution('abc', 'bc') // returns true
 solution('abc', 'd') // returns false
 */
 
-function solution(str, ending){
-  }
+function solution(str, ending) {
+  let s = str.split("").reverse().join("");
+  let e = ending.split("").reverse().join("");
+  return s.indexOf(e) == 0;
+}
 
-console.log(solution('aaaaaaabc', 'bc'));
+console.log(solution("aaaaaaabc", "bc"));
