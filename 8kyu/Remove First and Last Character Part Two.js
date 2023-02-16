@@ -17,9 +17,8 @@ Examples
 "1,2"  =>  NULL
 */
 
-function array(arr){
-    //Good luck
-    
-    }
+function array(arr) {
+  return arr.split(",").slice(1, -1).join(" ") || null;
+}
 
-console.log( array("1,2,3,4"));
+console.log(array("1,2,3,4"));
