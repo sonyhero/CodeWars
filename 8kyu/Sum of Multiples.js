@@ -13,8 +13,14 @@ sumMul(4, 123) ==> 4 + 8 + 12 + ... = 1860
 sumMul(4, -7)  ==> "INVALID"
 */
 
-function sumMul(n,m){
-  //your idea here
-  }
+function sumMul(n, m) {
 
-console.log(sumMul(2,9));
+    let sum = 0;
+    for (let i = n; i <= m; i++) {
+        if (i % n == 0) {
+            sum += i
+        }
+    } return (m>n) ? sum : "INVALID"
+}
+
+console.log(sumMul(2, 9));
