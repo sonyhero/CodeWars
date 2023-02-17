@@ -16,10 +16,13 @@ sum of all digits to the right of the middle digit(s) -> 10
 11 and 10 are not equal, so it's not balanced.
 */
 
-function balancedNum(number)
-{
-    return "Do your magic!"
+function balancedNum(number) {
+    let str = String(number);
+    let sum = 0;
+    for (let i = 0; i < str.length / 2 - 1; i++) {
+        sum += Number(str[i]) - Number(str[str.length - 1 - i])
+    }
+    return (sum == 0) ? "Balanced" : "Not Balanced"
 }
 
-console.log();
-
+console.log(balancedNum(22304));
