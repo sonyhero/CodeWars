@@ -10,8 +10,16 @@ n = 3, so I expect a 3x3 square back just like below as a string:
 
 */
 
-function generateShape(integer){
-
+function generateShape(integer) {
+  let str = "";
+  let arr = [];
+  for (let i = 1; i <= integer; i++) {
+    str += "+";
+  }
+  for (let i = 1; i <= integer; i++) {
+    arr.push(str);
+  }
+  return arr.join("\n");
 }
 
 console.log(generateShape(3));
