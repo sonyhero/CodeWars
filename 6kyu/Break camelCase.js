@@ -24,4 +24,10 @@ function solution(str) {
   return arr.join("");
 }
 
+//or
+
+function solution(str) {
+  return str.replace(/([A-Z])/g, " $1");
+}
+
 console.log(solution("caelasing"));
