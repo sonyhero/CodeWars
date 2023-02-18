@@ -9,8 +9,12 @@ Examples: (Input --> output)
 3 --> 36 (sum of the cubes of 1, 2, and 3 is 1 + 8 + 27)
 */
 
-function sumCubes(n){
-  // ...
+function sumCubes(n) {
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr.push(i ** 3);
+  }
+  return arr.reduce((a, b) => a + b);
 }
 
 console.log(sumCubes(3));
