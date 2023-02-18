@@ -17,4 +17,10 @@ function isPowerOfTwo(n){
     return (n==0)? false : (n & (n-1)) === 0
   }
 
+//or
+
+{
+  return Number.isInteger(Math.log2(n))
+}
+
   console.log(isPowerOfTwo(1024))
