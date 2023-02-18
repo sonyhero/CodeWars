@@ -22,4 +22,10 @@ function generateShape(integer) {
   return arr.join("\n");
 }
 
+//or
+
+function generateShape(n){
+    return ("+".repeat(n)+"\n").repeat(n).trim()
+  }
+
 console.log(generateShape(3));
