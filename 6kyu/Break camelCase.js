@@ -8,20 +8,20 @@ Example
 
 */
 
-function BreakCamelCase(str) {
- let regex = /[A-Z]/g;
- let find = str.match(regex);
- let arr = str.split('');
+function solution(str) {
+  if (str == str.toLowerCase()) return str;
+  let regex = /[A-Z]/g;
+  let find = str.match(regex);
+  let arr = str.split("");
 
- for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < find.length; j++) {
-         if(arr[i]==find[j]) {
-            arr[i]=" "+find[j]
-         }
+      if (arr[i] == find[j]) {
+        arr[i] = " " + find[j];
+      }
     }
-}
-return arr.join('')
+  }
+  return arr.join("");
 }
 
-
-console.log(BreakCamelCase("caMelCasing"));
+console.log(solution("caelasing"));
