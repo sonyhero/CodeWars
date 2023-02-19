@@ -13,14 +13,7 @@ Your task is to write a function which calculates the value of a word based off 
 
 The input will always be made of only lowercase letters and will never be empty.
 */
-console.log(
-  "The sunset sets at twelve o' clock."
-    .toLowerCase()
-    .replace(/[^a-z]/g, "")
-    .split("")
-    .map((x) => x.codePointAt(0) - 96)
-    .join(" ")
-);
+
 
 function wordsToMarks(string) {
   return string
