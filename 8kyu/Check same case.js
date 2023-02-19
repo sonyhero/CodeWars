@@ -17,8 +17,8 @@ Examples
 */
 
 
-function sameCase(a, b){
-   
-  }
+function sameCase(a, b) {
+    return ((/[a-z]/g.test(a) & /[a-z]/g.test(b)) || (/[A-Z]/g.test(a) & /[A-Z]/g.test(b))) ? 1 : (/[^a-z]/gi.test(a) || /[^a-z]/gi.test(b)) ? -1 : 0;
+}
 
 console.log(sameCase('a', '&'))
