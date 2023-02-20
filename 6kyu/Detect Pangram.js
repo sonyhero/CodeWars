@@ -23,11 +23,17 @@ console.log(isPangram("The quick brown fox jumps over the lazy dog"))
 
 function Pangram(string) {
  let alphabet = "abcdefghijklmnopqrstuvwxyz";
- alphabet.split('');
+ let alp = alphabet.split('');
  let str = string.toLowerCase().replace(/[^a-z]/g, "").split('');
- for (let i = 0; i < alphabet.length; i++) {
-    // to be continued
- }
+ let panagram = true;
+ for (let i = 0; i < alp.length; i++) {
+    if (str.includes(alp[i])) {
+        panagram = true
+    } else  {
+        panagram = false;
+        break
+    }
+ } return panagram;
 }
 
 console.log(Pangram("The quick brown fox jumps over the lazy dog"))
