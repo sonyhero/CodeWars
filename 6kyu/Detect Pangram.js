@@ -7,7 +7,7 @@ Given a string, detect whether or not it is a pangram.
 Return True if it is, False if not. Ignore numbers and punctuation.
 */
 
-function isPangram(string){
+function Pangram(string){
     console.log(
         string
         .toLowerCase()
@@ -19,11 +19,10 @@ function isPangram(string){
         )
   }
 
-console.log(isPangram("The quick brown fox jumps over the lazy dog"))
+console.log(Pangram("The quick brown fox jumps over the lazy dog"))
 
-function Pangram(string) {
- let alphabet = "abcdefghijklmnopqrstuvwxyz";
- let alp = alphabet.split('');
+function isPangram(string) {
+ let alp = "abcdefghijklmnopqrstuvwxyz".split('');
  let str = string.toLowerCase().replace(/[^a-z]/g, "").split('');
  let panagram = true;
  for (let i = 0; i < alp.length; i++) {
@@ -36,4 +35,4 @@ function Pangram(string) {
  } return panagram;
 }
 
-console.log(Pangram("The quick brown fox jumps over the lazy dog"))
+console.log(isPangram("The quick brown fox jumps over the lazy dog"))
