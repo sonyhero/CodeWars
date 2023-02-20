@@ -12,7 +12,7 @@ Note that you can receive floats as well.
 */
 
 function toNumberArray(stringarray) {
-  return;
+    return stringarray.map(x=>+x);
 }
 
 console.log(toNumberArray(["1.1", "2.2", "3.3"]));
