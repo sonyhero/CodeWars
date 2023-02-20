@@ -8,7 +8,26 @@ Return True if it is, False if not. Ignore numbers and punctuation.
 */
 
 function isPangram(string){
-    //...
+    console.log(
+        string
+        .toLowerCase()
+        .replace(/[^a-z]/g, "")
+        .split('')
+        .map(x=>x.codePointAt(0))
+        .sort((a,b)=>a-b)
+        .map(x=>String.fromCodePoint(x))
+        )
   }
 
 console.log(isPangram("The quick brown fox jumps over the lazy dog"))
+
+function Pangram(string) {
+ let alphabet = "abcdefghijklmnopqrstuvwxyz";
+ alphabet.split('');
+ let str = string.toLowerCase().replace(/[^a-z]/g, "").split('');
+ for (let i = 0; i < alphabet.length; i++) {
+    // to be continued
+ }
+}
+
+console.log(Pangram("The quick brown fox jumps over the lazy dog"))
