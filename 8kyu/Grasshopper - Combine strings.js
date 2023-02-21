@@ -9,6 +9,6 @@ returns:
 
 'James Stevens'*/
 
-const combineNames = (a, b) => 
+const combineNames = (a, b) => a + ' ' + b
 
 console.log(combineNames('James', 'Stevens'));
