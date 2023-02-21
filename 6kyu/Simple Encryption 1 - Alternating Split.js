@@ -16,12 +16,20 @@ If the string S is an empty value or the integer N is not positive, return the f
 */
 
 function encrypt(text, n) {
+  let arr = text.split("");
+  let newArr = [];
+  let newArr2 = [];
 
+  
+  for (let i = 1; i < arr.length; i += 2) {
+    newArr.push(arr[i]);
+    newArr2.push(arr[i - 1]);
+  }
+  arr = newArr.concat(newArr2);
+  return arr;
 }
 
-function decrypt(encryptedText, n) {
+function decrypt(encryptedText, n) {}
 
-}
-
-console.log(encrypt("012345", 3);
+console.log(encrypt("012345", 3));
 console.log(decrypt(encryptedText, n));
