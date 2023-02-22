@@ -15,8 +15,8 @@ text after  = "zzz"
 */
 
 
-function contamination(text, char) {
-
-}
+function contamination(text, char){
+    return char.repeat(text.length)
+  }
 
 console.log(contamination('aasdsdfs', '&'))
