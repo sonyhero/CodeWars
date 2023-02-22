@@ -17,7 +17,13 @@ For the sake of simplicity, you can assume that any numbers passed into the func
 
 
 function encode(string) {
-    return
+    let pairs1 = { a: "1", e: "2", i: "3", o: "4", u: "5" };
+    return string.split('').map(x=>{
+        if (/[aeiou]/.test(x)) {
+            return pairs1[x]
+        } else return x
+        
+    })
   }
   
   function decode(string) {
