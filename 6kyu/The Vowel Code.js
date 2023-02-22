@@ -23,7 +23,7 @@ function encode(string) {
             return pairs[x]
         } else return x
         
-    })
+    }).join('')
   }
   
   function decode(string) {
@@ -33,7 +33,7 @@ function encode(string) {
             return pairs[x]
         } else return x
         
-    })
+    }).join('')
   }
 
 console.log(decode('hello'))
