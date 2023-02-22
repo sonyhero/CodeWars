@@ -22,18 +22,16 @@ In case of an empty array return 0. You will not be tested with invalid input (i
 
 function countSmileys(arr) {
     let count = 0;
-    let regex = /[;|:][-|~][)|D]/
- for (let i = 0; i < arr.length; i++) {
-    if (arr[i] == ':)' || 
-    arr[i] == ';)' ||
-    arr[i] == ':D' ||
-    arr[i] == ';D') {
-        count++;
-    }
-    if (regex.test(arr[i])) {
-        count++;
-    }
- }return count;
+    let regex1 = /[;|:][)|D]/;
+    let regex2 = /[;|:][-|~][)|D]/;
+    for (let i = 0; i < arr.length; i++) {
+        if (regex1.test(arr[i])) {
+            count++;
+        }
+        if (regex2.test(arr[i])) {
+            count++;
+        }
+    } return count;
 }
 
 console.log(countSmileys([':)', ';(', ';}', ':-D']))
