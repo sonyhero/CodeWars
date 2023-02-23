@@ -8,6 +8,11 @@ Return the resulting array.
 
 
 function isVow(a){
+    return a.map(x=>{
+        if (/[aeiou]/.test(String.fromCodePoint(x))) {
+            return String.fromCodePoint(x)
+        } else return x;
+    })
 
 }
 
