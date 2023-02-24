@@ -8,12 +8,15 @@ numberToPower(10, 6) // -> 1000000
 Note: Math.pow and some other Math functions like eval() and ** are disabled.
 */
 
-function numberToPower(number, power){
+function numberToPower(number, power) {
   let result = 1;
   for (let i = 0; i < power; i++) {
-    result*=number;
+    result *= number;
   }
   return result;
 }
 
-console.log(numberToPower(2, 3))
+// рекурсионное решение?
+//const numberToPower = (number,power) => power > 0 ? number * numberToPower(number,power-1) : 1;
+
+console.log(numberToPower(2, 3));
