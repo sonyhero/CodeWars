@@ -9,8 +9,8 @@ uniTotal("aaa") == 291
 */
 
 function uniTotal (str) {
-    return (str.length==0) ? 0 : str.replace(/[^a-zA-Z]/gi, "").split('').map(x=>x.codePointAt(0)).reduce((a,b)=>a+b)
+    return (str.length==0) ? 0 : str.split('').map(x=>x.codePointAt(0)).reduce((a,b)=>a+b)
     }
 
 
-console.log(uniTotal(""));
+console.log(uniTotal("Mary Had A Little Lamb"));
