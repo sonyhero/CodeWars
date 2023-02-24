@@ -9,8 +9,11 @@ Note: Math.pow and some other Math functions like eval() and ** are disabled.
 */
 
 function numberToPower(number, power){
-  console.info(Math.log2(1024));
-  // Code here
+  let result = 1;
+  for (let i = 0; i < power; i++) {
+    result*=number;
+  }
+  return result;
 }
 
 console.log(numberToPower(2, 3))
