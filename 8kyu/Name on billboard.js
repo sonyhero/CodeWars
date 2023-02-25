@@ -6,8 +6,12 @@ You can not use multiplier "*" operator.
 If your name would be Jeong-Ho Aristotelis, ad would cost £600. 20 leters * 30 = 600 (Space counts as a character).
 */
 
-function billboard(name, price = 30){
-    } 
-
+function billboard(name, price = 30) {
+  let sum = 0;
+  for (let i = 0; i < name.length; i++) {
+    sum += price;
+  }
+  return sum;
+}
 
 console.log(billboard("Jeong-Ho Aristotelis"));
