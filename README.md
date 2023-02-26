@@ -1,3 +1,3 @@
 # CodeWars
 CodeWars - Tasks solution. JS.
-In this repository I post tasks solutions;
+In this repository I post tasks solutions!
