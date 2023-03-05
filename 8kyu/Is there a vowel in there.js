@@ -7,8 +7,8 @@ Return the resulting array.
 */
 
 
-function isVow(a){
-    return a.map(x=>{
+function isVow(a) {
+    return a.map(x => {
         if (/[aeiou]/.test(String.fromCodePoint(x))) {
             return String.fromCodePoint(x)
         } else return x;
@@ -16,4 +16,4 @@ function isVow(a){
 
 }
 
-console.log(isVow([101,121,110,113,113,103,121,121,101,107,103]))
+console.log(isVow([101, 121, 110, 113, 113, 103, 121, 121, 101, 107, 103]))
