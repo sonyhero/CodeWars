@@ -22,17 +22,14 @@
 
 var React = require("react");
 
-function createElement(content, tag, props) {
-  // create a react element here
-  if (tag) {
-    return React.createElement(`${tag}`, {props}, content)
+function createElement(content, tag = 'div', props = {}) {
+    return React.createElement(tag, props, content);
   }
- return React.createElement('div', {props}, content)
-}
-
-function createUnorderedList(list) { 
-  const mappedList = list.map((el, index) => {
-    return React.createElement('li', {key: index}, el)
-  })
-  return React.createElement('ul', {}, mappedList)
-}
+  
+  function createUnorderedList(list) {
+    const listItems = list.map((item, index) =>
+      React.createElement('li', { key: index }, item)
+    );
+  
+    return React.createElement('ul', null, listItems);
+  }
