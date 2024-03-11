@@ -17,19 +17,9 @@ class Singleton {
             return Singleton.instance;
         }
 
-        // Create the instance
-        this.data = "Singleton instance";
         Singleton.instance = this;
 
         // Optional: Prevent creating additional instances
         Object.freeze(this);
-    }
-
-    getData() {
-        return this.data;
-    }
-
-    setData(newData) {
-        this.data = newData;
     }
 }
