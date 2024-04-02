@@ -5,12 +5,4 @@ Provided is a function find which accepts two parameters in the following order:
 
 */
 
-function find(array, element) {
-    for (let i = 0; i < array.length; i++) {
-      if (array[i] === element) return i;
-    }
-    return "Not found";
-  }
-
-
-console.log(find([2,3,5,7,11], 2));
+let find = (arr, el) => arr.indexOf(el) === -1 ? 'Not found' : arr.indexOf(el)
