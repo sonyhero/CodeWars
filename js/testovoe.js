@@ -2,6 +2,7 @@ const newFunc = (x, fullValue = false) => {
   try {
     const numberString = x.toString()
     const numberStringLength = numberString.length
+
     if (fullValue || numberStringLength < 7) {
       let parts = numberString.split('.')
       parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
@@ -10,29 +11,24 @@ const newFunc = (x, fullValue = false) => {
     if (numberStringLength > 12) {
       return '999B+'
     }
+
+    const getDotWithNumber = (numberValue) => (numberValue ? '.' : '') + numberValue
     const getNumber = (index) => numberString[index] === '0' ? '' : numberString[index]
-    const appendDotWithNumber = (value) => (value ? '.' : '') + value
-    const generateFormattedNumber = (suffix) => {
-      return getNumber(3) ? numberString.slice(0, 2) + '.' + numberString.slice(2, 4) + suffix :
-        generateOddFormattedNumber(suffix, 2)
+    const sliceWithNumber = (suffix, index, numberValue = '') => numberString.slice(0, index) + getDotWithNumber(getNumber(index)) + numberValue + suffix
+
+    const formattedResults = {
+      12: sliceWithNumber('B', 3),
+      11: sliceWithNumber('B', 2, getNumber(3)),
+      10: sliceWithNumber('B', 1, getNumber(2)),
+      9: sliceWithNumber('M', 3),
+      8: sliceWithNumber('M', 2, getNumber(3)),
+      7: sliceWithNumber('M', 1, getNumber(2)),
     }
-    const generateOddFormattedNumber = (suffix, index) => {
-      return numberString.slice(0, index) + appendDotWithNumber(getNumber(index)) + suffix
-    }
-    const generateEvenFormattedNumber = (suffix) => {
-      return numberString[0] + appendDotWithNumber(numberString[1]) + getNumber(2) + suffix
-    }
-    const objWithResults = {
-      12: generateOddFormattedNumber('B', 3),
-      11: generateFormattedNumber('B'),
-      10: generateEvenFormattedNumber('B'),
-      9: generateOddFormattedNumber('M', 3),
-      8: generateFormattedNumber('M'),
-      7: generateEvenFormattedNumber('M'),
-    }
-    return objWithResults[numberStringLength]
+
+    return formattedResults[numberStringLength]
+
   } catch (e) {
-    const errorMessage = `[numberWithSpaces] error with ${e}`
+    const errorMessage = `[newFunc] error with ${e}`
     console.log(errorMessage)
     return errorMessage
   }
